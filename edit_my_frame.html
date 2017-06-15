@@ -1,0 +1,110 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0" />
+    <title>FunApp</title>
+    <link rel="stylesheet" type="text/css" href="../css/api.css" />
+    <style>
+        .login {
+            background-image: url(./image/my/personal_bkg.jpg);
+            background-repeat: no-repeat;
+            background-size: 100% 100% ;
+            position: relative;
+        }
+
+
+
+        .login .personal_logo {
+            position: absolute;
+            top: 60px;
+            width: 64px;
+            height: 64px;
+            left: 20px;
+        }
+
+
+    </style>
+</head>
+<body>
+<div class="login open-win" win="person_info" login="true">
+
+    <img id="userAvatar" src="./image/my/profile_default.png" class="personal_logo">
+     <form action="/FastFood/userInfo.do?p=addUser" method="post" name="myForm" enctype="multipart/form-data">
+      <table class="table" cellspacing="1" cellpadding="2" width="99%" align="center" border="0">
+      <tbody>
+   <tr>
+        <td class="bg_tr" height="21" colspan="2"></td>
+       </tr>
+     </tbody>
+      </table>
+      <table class="table" cellspacing="1" cellpadding="2" width="99%" align="center" border="0">
+      <tbody>
+   <tr>
+        <th class="bg_tr" align="right" colspan="2" height="25">
+         <input type="button" value="" onclick="javascript:history.go(-1);" style="cursor:pointer;border:0px;width:54px;height:22px;background-image:url(admin/images/fh.jpg);">
+        </th>
+       </tr>
+   <tr>
+        <td class="td_bg" width="45%" height="26" align="right">Username：<font color="red">*</font></td>
+        <td class="td_bg" width="55%">
+         <div style="float:left;"><input id="userName" name="userName" onblur="yzName2()" style="width:180px;"></div>
+         <div id="yzUserName" style="float:left;margin-left:6px;margin-top:3px;"></div>
+        </td>
+       </tr>
+   <tr>
+        <td class="td_bg" width="45%" height="26" align="right">Password：<font color="red">*</font></td>
+        <td class="td_bg" width="55%">
+         <div style="float:left;"><input type="password" id="pwd" name="pwd" onblur="yzPwd()" style="width:180px;"></div>
+         <div id="yzPwd" style="float:left;margin-left:6px;margin-top:3px;"></div>
+        </td>
+       </tr>
+   <tr>
+        <td class="td_bg" width="45%" height="26" align="right">Password again：<font color="red">*</font></td>
+        <td class="td_bg" width="55%">
+         <div style="float:left;"><input type="password" id="Rpwd" onblur="yzRPwd()" style="width:180px;"></div>
+         <div id="yzRpwd" style="float:left;margin-left:6px;margin-top:3px;"></div>
+        </td>
+       </tr>
+   <tr>
+        <td class="td_bg" width="45%" height="26" align="right">Sex：<font color="red">*</font></td>
+        <td class="td_bg" width="55%">
+         <input type="radio" id="sex" name="sex" value="1" checked>Male
+         <input type="radio" id="sex" name="sex" value="2">Female
+        </td>
+       </tr>
+   <tr>
+        <td class="td_bg" width="45%" height="26" align="right">User Image：  </td>
+        <td class="td_bg" width="55%"><input type="file" name="photos" style="width:252px;"></td>
+       </tr>
+   <tr>
+        <td class="td_bg" width="45%" height="26" align="right">Telephone：  </td>
+        <td class="td_bg" width="55%"><input name="telephone" onkeypress="return regInput(this,/^[0-9-]*$/,String.fromCharCode(event.keyCode))" style="width:180px;"></td>
+       </tr>
+   <tr>
+        <td class="td_bg" width="45%" height="26" align="right">Email：  </td>
+        <td class="td_bg" width="55%">
+         <div style="float:left;"><input id="email" name="email" onblur="yzEmail()" style="width:180px;"></div>
+         <div id="yzEmail" style="float:left;margin-left:6px;margin-top:3px;"></div>
+        </td>
+       </tr>
+   <tr>
+        <td class="td_bg" width="45%" height="26" align="right">Interest：  </td>
+        <td class="td_bg" width="55%"><input name="address" style="width:180px;"></td>
+       </tr>
+  </tbody>
+      </table>
+      <table class="table" cellspacing="1" cellpadding="2" width="99%" align="center" border="0">
+      <tbody>
+   <tr>
+        <td class="td_bg" align="center" colspan="2" height="28">
+         <input type="button" value="Submit" onclick="tijiao()" style="cursor:pointer;border:0px;width:50px;height:20px;background-image:url(images/tijiao.jpg);">
+            
+         <input type="reset" value="Reset" style="cursor:pointer;border:0px;width:50px;height:20px;background-image:url(images/tijiao.jpg);">
+        </td>
+       </tr>
+  </tbody>
+      </table>
+     </form>
+</div>
+
